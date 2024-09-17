@@ -38,7 +38,7 @@ The fine-tuned ViT and the trained classifier models can be used for feature ext
 
 The T4 GPU on Google Colab was used to train the models. Feature extraction, data augmentation and transformation to create input tensors for ViT were created using the High RAM mode on Colab for faster processing (can take upto 40 mins which is a waste of GPU runtime). These tensors are then saved to ease experimentation with the model and ensure that GPU runtime is not wasted on non-GPU intensive tasks.
 
-# Refernces
+# References
 
 1. Basu, A., et al. (2021). Chest X-Ray Dataset for Respiratory Disease Classification, Harvard Dataverse.
 2. Dosovitskiy, A., et al. (2020). "An image is worth 16x16 words: Transformers for image recognition at scale." arXiv preprint arXiv:2010.11929.
