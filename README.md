@@ -1,12 +1,12 @@
 # ViTforImbalancedData
-This project was developed under partial fulfilment of MSc. AI U& ML course at the University of Birmimgham
+This project was developed under partial fulfilment of MSc. AI & ML course at the University of Birmingham
 
 # Background
 Fine-tuning vision transformer as feature extractor for highly imbalanced multilabel dataset.
 
-Medical datasets can be highly imbalanced. THere might not be enough data for rare diseases or emerging infectious diseases. The lack of enough positive samples makes it hard for models to learn distinguishing features. The problem becomes more severe when dealing with multilabel datasets. Moreover, most of the pre-trained models are trained on generic datasets that lack features seen in medical images like X-Rays, MRIs, CT Scans, etc.
+Medical datasets can be highly imbalanced. There might not be enough data for rare diseases or emerging infectious diseases. The lack of enough positive samples makes it hard for models to learn distinguishing features. The problem becomes more severe when dealing with multilabel datasets. Moreover, most of the pre-trained models are trained on generic datasets that lack features seen in medical images like X-Rays, MRIs, CT Scans, etc.
 
-Vision Transformers are considered state-of-the-art for a variety of computer vision tasks because of their ability to learn both local and global features by using attention mechanism on images. But, even ViT can fail to perform well on multilable classification task for a highly imbalanced dataset. To make this possible, ViT is first fine-tuned on a CXR dataset (Harvard Dataverse). This fine-tuned ViT is then used as a feature extractor and a FC linear classifier is trained for classification. 
+Vision Transformers are considered state-of-the-art for a variety of computer vision tasks because of their ability to learn both local and global features by using attention mechanism on images. But, even ViT can fail to perform well on multilabel classification task for a highly imbalanced dataset. To make this possible, ViT is first fine-tuned on a CXR dataset (Harvard Dataverse). This fine-tuned ViT is then used as a feature extractor and a FC linear classifier is trained for classification. 
 
 A random sample of NIH Chest X-Ray dataset is used here. It has a small number of samples (of around 5000), and 15 labels for multilabel classification. There are less than a 100 samples for some labels. Techniques like data augmentation for minority classes and undersampling for majority classes are used. Samples are first fed to the fine-tuned ViT to get the features, which makes the input for the linear classifier. 
 
